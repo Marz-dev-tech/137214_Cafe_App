@@ -1,6 +1,9 @@
 package com.example.cafe_app
 
 import android.os.Bundle
+import android.view.View
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,4 +20,18 @@ class OrderActivity : AppCompatActivity() {
             insets
         }
     }
+
+    fun onRadioButtonClicked(view: View){
+        if (view is RadioButton){
+            val checked = view.isChecked
+            when(view.id){
+                R.id.sameday -> if(checked){
+                    Toast.makeText(this,"Same day messenger service selected", Toast.LENGTH_SHORT).show()}
+                R.id.nextday -> if(checked){
+                    Toast.makeText(this,"Next day ground delivery selected", Toast.LENGTH_SHORT).show()}
+                R.id.pickup -> if(checked){
+                    Toast.makeText(this,"Self pick up selected", Toast.LENGTH_SHORT).show()}
+                    }
+                }
+            }
 }
