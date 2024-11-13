@@ -13,8 +13,11 @@
         android:theme="@style/Theme.Cafe_App"
         tools:targetApi="31">
         <activity
+            android:name=".OrderDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderActivity"
-            android:label = "Order Activity"
+            android:label="Order Activity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"

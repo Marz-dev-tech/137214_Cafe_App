@@ -1,7 +1,10 @@
 package com.example.cafe_app
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
+import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -34,4 +37,9 @@ class OrderActivity : AppCompatActivity() {
                     }
                 }
             }
+    fun submitForm(view: View){
+        val intent = Intent(this,
+            OrderDetailsActivity::class.java)
+        startActivity(intent)
+    }
 }
